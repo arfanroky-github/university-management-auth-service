@@ -37,8 +37,8 @@ async function bootstrap() {
 
 bootstrap();
 
-process.on('SIGTERM', () => {
-  successLogger.info('SIGTERM is received');
+process.on('SIGTERM', (error) => {
+  successLogger.info('SIGTERM is received', error);
   if (server) {
     server.close();
   }
