@@ -54,6 +54,16 @@
             "date": 1686531639289,
             "name": "/home/roky/level2/university-management/logs/winston/successes/UM-2023-06-12-07-success.log",
             "hash": "94ff62285bca80799b9cb85f5596762f80e56f7c2ed7764ed1af25aabcee2974"
+        },
+        {
+            "date": 1686617256189,
+            "name": "/home/roky/level2/university-management/logs/winston/successes/UM-2023-06-13-06-success.log",
+            "hash": "3a90ec8389d00c23980b737c5e518065006d733358a991aea956b52133c169ac"
+        },
+        {
+            "date": 1686618370515,
+            "name": "/home/roky/level2/university-management/logs/winston/successes/UM-2023-06-13-07-success.log",
+            "hash": "5c84f0d6525136b815050f5ed0f2f7dff4eb611e5a47e282ae646590ba1ee3c4"
         }
     ],
     "hashType": "sha256"

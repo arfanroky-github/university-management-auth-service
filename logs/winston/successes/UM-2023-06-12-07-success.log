@@ -15,3 +15,8 @@ Mon Jun 12 2023 7:19:32 AM --> [UM] info: SIGTERM is received
 Mon Jun 12 2023 7:21:38 AM --> [UM] info: 🛢   Database is connected successfully
 Mon Jun 12 2023 7:21:38 AM --> [UM] info: Application  listening on port 8000
 Mon Jun 12 2023 7:22:03 AM --> [UM] info: SIGTERM is received
+Mon Jun 12 2023 7:45:09 AM --> [UM] info: 🛢   Database is connected successfully
+Mon Jun 12 2023 7:45:09 AM --> [UM] info: Application  listening on port 8000
+Mon Jun 12 2023 7:49:22 AM --> [UM] info: SIGTERM is received
+Mon Jun 12 2023 7:51:49 AM --> [UM] info: 🛢   Database is connected successfully
+Mon Jun 12 2023 7:51:49 AM --> [UM] info: Application  listening on port 8000

@@ -24,5 +24,13 @@ export type AcademicSemesterType = {
   endMonth: AcademicSemesterMonth;
 };
 
-export type AcademicSemesterModelType = Model<AcademicSemesterType>;
+export type GenericResponseType<T> = {
+  meta: {
+    page: number;
+    limit: number;
+    total: number;
+  };
+  data: T;
+};
 
+export type AcademicSemesterModelType = Model<AcademicSemesterType>;
