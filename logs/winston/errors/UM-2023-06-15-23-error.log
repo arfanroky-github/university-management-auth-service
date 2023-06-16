@@ -1,0 +1,4 @@
+Thu Jun 15 2023 11:25:44 PM --> [UM] error: Cast to ObjectId failed for value "648666aeea8b9672fda3a35" (type string) at path "_id" for model "AcademicSemester"
+Thu Jun 15 2023 11:27:55 PM --> [UM] error: Cast to ObjectId failed for value "648666aeea8b9672fda3a35" (type string) at path "_id" for model "AcademicSemester"
+Thu Jun 15 2023 11:28:39 PM --> [UM] error: Cast to ObjectId failed for value "648666aeea8b9672fda3a35" (type string) at path "_id" for model "AcademicSemester"
+Thu Jun 15 2023 11:29:15 PM --> [UM] error: Cast to ObjectId failed for value "648666aeea8b9672fda3a35" (type string) at path "_id" for model "AcademicSemester"

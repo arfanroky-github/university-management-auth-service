@@ -1,7 +1,11 @@
 import httpStatus from 'http-status';
 import ApiError from '../../../errors/ApiError';
-import { AcademicSemesterConstant } from './academicSemester.constant';
 import {
+  AcademicSemesterConstant,
+  academicSemesterSearchableFields,
+} from './academicSemester.constant';
+import {
+  AcademicSemesterFiltersType,
   AcademicSemesterType,
   GenericResponseType,
 } from './academicSemester.interface';
@@ -27,8 +31,32 @@ async function createSemesterToDb(
 }
 
 async function getAllSemestersFromDb(
+  filters: AcademicSemesterFiltersType,
   PaginationOptions: PaginationOptions
 ): Promise<GenericResponseType<AcademicSemesterType[]>> {
+  const { searchTerm, ...filterData } = filters;
+
+  // search conditions
+  const andConditions = [];
+  if (searchTerm) {
+    andConditions.push({
+      $or: academicSemesterSearchableFields.map(field => ({
+        [field]: {
+          $regex: searchTerm,
+          $options: 'i',
+        },
+      })),
+    });
+  }
+
+  if (Object.keys(filterData).length > 0) {
+    andConditions.push({
+      $and: Object.entries(filterData).map(([key, value]) => ({
+        [key]: value,
+      })),
+    });
+  }
+
   const { page, limit, skip, sortBy, sortOrder } =
     calculatePagination(PaginationOptions);
   const sortCondition: { [key: string]: SortOrder } = {};
@@ -36,10 +64,14 @@ async function getAllSemestersFromDb(
     sortCondition[sortBy] = sortOrder;
   }
 
-  const result = await AcademicSemester.find()
+  const whereConditions =
+    andConditions.length > 0 ? { $and: andConditions } : {};
+
+  const result = await AcademicSemester.find(whereConditions)
     .sort(sortCondition)
     .skip(skip)
     .limit(limit);
+
   return {
     meta: {
       page,
@@ -50,7 +82,47 @@ async function getAllSemestersFromDb(
   };
 }
 
+async function getSingleSemesterFromDb(
+  id: string
+): Promise<AcademicSemesterType | null> {
+  const result = await AcademicSemester.findById(id);
+  return result;
+}
+
+async function updateSemesterToDb(
+  id: string,
+  payload: Partial<AcademicSemesterType>
+): Promise<AcademicSemesterType | null> {
+  const isMatch =
+    payload.title &&
+    AcademicSemesterConstant.AcademicSemesterTitleCodeMapper[payload.title];
+  if (payload.title && isMatch !== payload.code) {
+    throw new ApiError(
+      httpStatus.BAD_REQUEST,
+      `Invalid semester code, ${payload.title} Code --> ${isMatch}`
+    );
+  }
+
+  const result = await AcademicSemester.findByIdAndUpdate(
+    {
+      _id: id,
+    },
+    payload,
+    { new: true }
+  );
+
+  return result;
+}
+
+async function deleteSemesterFromDb(id: string): Promise<AcademicSemesterType | null> {
+  const result = await AcademicSemester.findByIdAndDelete(id);
+  return result;
+}
+
 export const AcademicSemesterService = {
   createSemesterToDb,
   getAllSemestersFromDb,
+  getSingleSemesterFromDb,
+  updateSemesterToDb,
+  deleteSemesterFromDb
 };

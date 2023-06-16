@@ -6,64 +6,19 @@
     "auditLog": "/home/roky/level2/university-management/logs/winston/successes/.12d83409c2521502cc68cb7230b7fdf6e7e0e40a-audit.json",
     "files": [
         {
-            "date": 1685765679245,
-            "name": "/home/roky/level2/university-management/logs/winston/successes/UM-2023-06-03-10-success.log",
-            "hash": "679920cf4562bb0e40d8a2615ce050d954220f657feee7bf19471435e51284bb"
+            "date": 1686849034741,
+            "name": "/home/roky/level2/university-management/logs/winston/successes/UM-2023-06-15-23-success.log",
+            "hash": "f8196ac1674dac985f13c08e1b057ee91515039d71fcd8685a218aa9026086da"
         },
         {
-            "date": 1686286651935,
-            "name": "/home/roky/level2/university-management/logs/winston/successes/UM-2023-06-09-10-success.log",
-            "hash": "155c0707f9dd3e3f823d434b8412958c273da75e9eda52ed21bfc5c68ff5e585"
+            "date": 1686879690289,
+            "name": "/home/roky/level2/university-management/logs/winston/successes/UM-2023-06-16-07-success.log",
+            "hash": "f2ef97b0d078f62572cb6d7b0e2a7b249706f6d907f48eaad3b7e47f56766c15"
         },
         {
-            "date": 1686286890533,
-            "name": "/home/roky/level2/university-management/logs/winston/successes/UM-2023-06-09-11-success.log",
-            "hash": "3f01527b0ada621701c799f8f5fc4dbc2990216a3e6d6e494494b2bc3928838b"
-        },
-        {
-            "date": 1686290401245,
-            "name": "/home/roky/level2/university-management/logs/winston/successes/UM-2023-06-09-12-success.log",
-            "hash": "0fe93942333752274c35002798c4e60a2d8c3e167cf623c88cb984db908ca985"
-        },
-        {
-            "date": 1686375374734,
-            "name": "/home/roky/level2/university-management/logs/winston/successes/UM-2023-06-10-11-success.log",
-            "hash": "acaf65a172e621e683cdecd694bc32837f93452db69cd26df011f1b1dd13a2d7"
-        },
-        {
-            "date": 1686387249968,
-            "name": "/home/roky/level2/university-management/logs/winston/successes/UM-2023-06-10-14-success.log",
-            "hash": "b5b81fb5b3ca558abaf2ef24fc82f0ac1614abc85f1eb4046ad74cdcb4e2d393"
-        },
-        {
-            "date": 1686388558449,
-            "name": "/home/roky/level2/university-management/logs/winston/successes/UM-2023-06-10-15-success.log",
-            "hash": "b29d0a335f1fd9e6fb7e59b743d17ee0e3a9a1a8cf1fa5d5f985fe268859176b"
-        },
-        {
-            "date": 1686391239744,
-            "name": "/home/roky/level2/university-management/logs/winston/successes/UM-2023-06-10-16-success.log",
-            "hash": "76fb6242ea888f07d6e8ffaa233288dcf7d8f98aa7b0e6f3a82b7b09948d90f2"
-        },
-        {
-            "date": 1686529487260,
-            "name": "/home/roky/level2/university-management/logs/winston/successes/UM-2023-06-12-06-success.log",
-            "hash": "0e4784552ab6633a56163228434451e4ad914d156743b7e60dbc1a89ecef5725"
-        },
-        {
-            "date": 1686531639289,
-            "name": "/home/roky/level2/university-management/logs/winston/successes/UM-2023-06-12-07-success.log",
-            "hash": "94ff62285bca80799b9cb85f5596762f80e56f7c2ed7764ed1af25aabcee2974"
-        },
-        {
-            "date": 1686617256189,
-            "name": "/home/roky/level2/university-management/logs/winston/successes/UM-2023-06-13-06-success.log",
-            "hash": "3a90ec8389d00c23980b737c5e518065006d733358a991aea956b52133c169ac"
-        },
-        {
-            "date": 1686618370515,
-            "name": "/home/roky/level2/university-management/logs/winston/successes/UM-2023-06-13-07-success.log",
-            "hash": "5c84f0d6525136b815050f5ed0f2f7dff4eb611e5a47e282ae646590ba1ee3c4"
+            "date": 1686880849204,
+            "name": "/home/roky/level2/university-management/logs/winston/successes/UM-2023-06-16-08-success.log",
+            "hash": "6b3067b9cbcc9c9c5239de2d72043679f2a6f02562531c68ca5839ef26c0bbb0"
         }
     ],
     "hashType": "sha256"

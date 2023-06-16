@@ -18,7 +18,7 @@ export type AcademicSemesterTitle = 'Autumn' | 'Fall' | 'Summer';
 
 export type AcademicSemesterType = {
   title: AcademicSemesterTitle;
-  year: number;
+  year: string;
   code: AcademicSemesterCode;
   startMonth: AcademicSemesterMonth;
   endMonth: AcademicSemesterMonth;
@@ -31,6 +31,13 @@ export type GenericResponseType<T> = {
     total: number;
   };
   data: T;
+};
+
+export type AcademicSemesterFiltersType = {
+  searchTerm?: string;
+  title?: string;
+  code?: string;
+  year?: string;
 };
 
 export type AcademicSemesterModelType = Model<AcademicSemesterType>;

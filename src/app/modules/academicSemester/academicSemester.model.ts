@@ -20,7 +20,7 @@ const academicSemesterSchema = new Schema<AcademicSemesterType>({
     enum: AcademicSemesterConstant.month,
   },
   code: { type: String, required: true, enum: ['01', '02', '03'] },
-  year: { type: Number, required: true },
+  year: { type: String, required: true },
 });
 
 // hanldling same year and same semester issue student can't create same year same title
