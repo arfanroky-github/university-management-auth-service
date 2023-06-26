@@ -4,20 +4,24 @@ import cors from 'cors';
 import globalErrorHandler from './app/middlewares/globalErrorHandler';
 import routes from './app/routes';
 import httpStatus from 'http-status';
+// import { generateFacultyId, generateStudentId } from './app/modules/user/user.utils';
+// import { generateStudentId } from './app/modules/user/user.utils';
 
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+console.log(routes)
+
 // applicaiton route
 app.use('/api/v1/', routes);
 
-app.get('/', async (req: Request, res: Response) => {
+app.get('/', (req: Request, res: Response) => {
   res.send('Hello from university managment!');
 });
 app.use(globalErrorHandler);
 
-/// handle  not found route
+/// handle not found route
 app.use((req: Request, res: Response, next: NextFunction) => {
   res.status(httpStatus.NOT_FOUND).json({
     success: false,
@@ -31,5 +35,6 @@ app.use((req: Request, res: Response, next: NextFunction) => {
   });
   next();
 });
+
 
 export default app;

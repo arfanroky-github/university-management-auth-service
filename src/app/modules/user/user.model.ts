@@ -1,8 +1,7 @@
-import mongoose from 'mongoose';
+import { Schema, model } from 'mongoose';
 import { IUser, UserModel } from './user.interface';
 
-
-const userSchema = new mongoose.Schema<IUser>(
+const userSchema = new Schema<IUser>(
   {
     id: {
       type: String,
@@ -17,12 +16,25 @@ const userSchema = new mongoose.Schema<IUser>(
       type: String,
       required: true,
     },
+    student: {
+      type: Schema.Types.ObjectId,
+      ref: 'Student',
+    },
+    // faculty: {
+    //   type: Schema.Types.ObjectId,
+    //   ref: 'Faculty',
+    // },
+    // Admin: {
+    //   type: Schema.Types.ObjectId,
+    //   ref: 'Admin',
+    // },
   },
   {
     timestamps: true,
+    toJSON: {
+      virtuals: true,
+    },
   }
 );
-
-const User = mongoose.model<IUser, UserModel>('User', userSchema);
-
-export default User;
+ const User = model<IUser, UserModel>('User', userSchema);
+ export default User;

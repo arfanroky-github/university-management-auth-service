@@ -19,6 +19,36 @@
             "date": 1686880849207,
             "name": "/home/roky/level2/university-management/logs/winston/errors/UM-2023-06-16-08-error.log",
             "hash": "83e15e9bfc06ca0bedeb5de3e06d1aa77f76d317b324d4912b11994022ef5323"
+        },
+        {
+            "date": 1686885765728,
+            "name": "/home/roky/level2/university-management/logs/winston/errors/UM-2023-06-16-09-error.log",
+            "hash": "7960d4d980d1dc63d9ccf411bb2e01ba211ff3a9c3d3cbf848d7b2a01d1ad28a"
+        },
+        {
+            "date": 1686924208929,
+            "name": "/home/roky/level2/university-management/logs/winston/errors/UM-2023-06-16-20-error.log",
+            "hash": "b03899e1529e2004811504c0f11e043d2c340aa615e7e0c85ffa110dc66d6348"
+        },
+        {
+            "date": 1686927765008,
+            "name": "/home/roky/level2/university-management/logs/winston/errors/UM-2023-06-16-21-error.log",
+            "hash": "73e928a7e5da6408553debac1cd3e962f44171904e494518b4a9b61131aab8f1"
+        },
+        {
+            "date": 1686931402405,
+            "name": "/home/roky/level2/university-management/logs/winston/errors/UM-2023-06-16-22-error.log",
+            "hash": "8bb9a4c058a09689b2a6325b7fb6d2aae5cc25e090eab637c61de558e46495f5"
+        },
+        {
+            "date": 1687015363577,
+            "name": "/home/roky/level2/university-management/logs/winston/errors/UM-2023-06-17-21-error.log",
+            "hash": "badb1b57862fb71cd87655fe1c9477ea36d0a90ddcf304af717db240127a728d"
+        },
+        {
+            "date": 1687049694280,
+            "name": "/home/roky/level2/university-management/logs/winston/errors/UM-2023-06-18-06-error.log",
+            "hash": "a39fa92792ddfcf6984eae1213da0bd575afb10fc40adf315b8c1e52336e3824"
         }
     ],
     "hashType": "sha256"
