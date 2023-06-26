@@ -11,7 +11,6 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-console.log(routes)
 
 // applicaiton route
 app.use('/api/v1/', routes);

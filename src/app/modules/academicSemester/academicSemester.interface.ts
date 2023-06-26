@@ -23,6 +23,14 @@ export type AcademicSemesterType = {
   startMonth: AcademicSemesterMonth;
   endMonth: AcademicSemesterMonth;
 };
+// const json = {
+//   "title": "Autumn",
+//     "year": "2022",
+//     "code": "01",
+//     "startMonth": "September",
+//     "endMonth": "December"
+
+// }
 
 export type GenericResponseType<T> = {
   meta: {
