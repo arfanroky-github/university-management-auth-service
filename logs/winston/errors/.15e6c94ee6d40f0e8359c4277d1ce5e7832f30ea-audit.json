@@ -79,6 +79,21 @@
             "date": 1687860033345,
             "name": "/home/roky/level2/university-management/logs/winston/errors/UM-2023-06-27-16-error.log",
             "hash": "b1e0a7cc2dc3af60e402e4e204c7fcde02cef81ae99232a567b7ad92a5dd4580"
+        },
+        {
+            "date": 1687863704017,
+            "name": "/home/roky/level2/university-management/logs/winston/errors/UM-2023-06-27-17-error.log",
+            "hash": "bba90d4dbe8d5ec1b4ba202844e6cc8215bfea3f61dba0677b2c0aece3829107"
+        },
+        {
+            "date": 1687881150257,
+            "name": "/home/roky/level2/university-management/logs/winston/errors/UM-2023-06-27-21-error.log",
+            "hash": "3d44abb06a97e2258e260ba1d8ae3567cb0353f933b93761cfd932e18909821a"
+        },
+        {
+            "date": 1687881738088,
+            "name": "/home/roky/level2/university-management/logs/winston/errors/UM-2023-06-27-22-error.log",
+            "hash": "fcfff09fb23fda3d476a3ee006f4c84da8e0a3e6e9b72c90aa119b329013f1c9"
         }
     ],
     "hashType": "sha256"
