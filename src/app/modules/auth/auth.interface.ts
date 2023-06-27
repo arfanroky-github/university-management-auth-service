@@ -4,7 +4,12 @@ export type LoginType = {
 };
 
 export type LoginResultType = {
-  access_token: string;
-  refresh_token: string;
-  needs_password_change: boolean;
+  accessToken: string;
+  refreshToken: string;
+  needsPasswordChange: boolean;
+};
+
+
+export type RefreshTokenResponse = {
+  accessToken: string;
 };

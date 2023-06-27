@@ -4,17 +4,15 @@ import cors from 'cors';
 import globalErrorHandler from './app/middlewares/globalErrorHandler';
 import routes from './app/routes';
 import httpStatus from 'http-status';
-// import { generateFacultyId, generateStudentId } from './app/modules/user/user.utils';
-// import { generateStudentId } from './app/modules/user/user.utils';
+import cookieParser from 'cookie-parser';
 
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
+app.use(cookieParser())
 
 // applicaiton route
 app.use('/api/v1/', routes);
-
 app.get('/', (req: Request, res: Response) => {
   res.send('Hello from university managment!');
 });
@@ -34,6 +32,5 @@ app.use((req: Request, res: Response, next: NextFunction) => {
   });
   next();
 });
-
 
 export default app;
