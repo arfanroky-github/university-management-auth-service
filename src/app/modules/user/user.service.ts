@@ -211,8 +211,15 @@ const createAdminToDb = async (
   return newUserAllData;
 };
 
+async function getAllUsersFromDb(): Promise<IUser[] | null> {
+  return await User.find({});
+}
+
+
+
 export const UserService = {
   createStudentToDb,
   createAdminToDb,
   createFacultyToDb,
+  getAllUsersFromDb
 };

@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/no-this-alias */
 import { Schema, model } from 'mongoose';
-import { IUser, IUserMethods, UserModel } from './user.interface';
+import { IUser, UserDocument } from './user.interface';
 import bcrypt from 'bcrypt';
 import config from '../../../config';
 
-const userSchema = new Schema<IUser, Record<string, never>, IUserMethods>(
+const userSchema = new Schema<IUser, UserDocument>(
   {
     id: {
       type: String,
@@ -54,21 +54,41 @@ userSchema.pre('save', async function (next) {
   next();
 });
 
-userSchema.methods.isUserExist = async function (
-  id: string
-): Promise<Pick<IUser, 'id' | 'need_password_change' | 'password'> | null> {
+// userSchema.methods.isUserExist = async function (
+//   id: string
+// ): Promise<Pick<IUser, 'id' | 'need_password_change' | 'password'> | null> {
+//   return await User.findOne(
+//     { id },
+//     { id: 1, password: 1, need_password_change: 1 }
+//   );
+// };
+
+// userSchema.methods.isPasswordMatched = async function (
+//   givenPassword: string,
+//   savedPassword: string
+// ): Promise<boolean> {
+//   return await bcrypt.compare(givenPassword, savedPassword);
+// };
+
+userSchema.static(
+  'isPasswordMatched',
+  async function (
+    givenPassword: string,
+    savedPassword: string
+  ): Promise<boolean> {
+    return await bcrypt.compare(givenPassword, savedPassword);
+  }
+);
+
+userSchema.static('isUserExist', async function (id: string): Promise<Pick<
+  IUser,
+  'id' | 'password' | 'need_password_change' | 'role'
+> | null> {
   return await User.findOne(
     { id },
-    { id: 1, password: 1, need_password_change: 1 }
+    { id: 1, password: 1, role: 1, need_password_change: 1 }
   );
-};
+});
 
-userSchema.methods.isPasswordMatched = async function (
-  givenPassword: string,
-  savedPassword: string
-): Promise<boolean> {
-  return await bcrypt.compare(givenPassword, savedPassword);
-};
-
-const User = model<IUser, UserModel>('User', userSchema);
+const User = model<IUser, UserDocument>('User', userSchema);
 export default User;

@@ -48,8 +48,22 @@ const createAdmin: RequestHandler = catchAsync(
   }
 );
 
+const getAllUsers: RequestHandler = catchAsync(
+  async (req: Request, res: Response) => {
+    const result = await UserService.getAllUsersFromDb();
+
+    sendResponse<IUser[] | null>(res, {
+      statusCode: httpStatus.OK,
+      success: true,
+      message: 'Users fetched successfully!',
+      data: result,
+    });
+  }
+);
+
 export const UserController = {
   createStudent,
   createFaculy,
   createAdmin,
+  getAllUsers,
 };
